@@ -1,0 +1,23 @@
+public class BarkingDog {
+    public static void main(String[] args) {
+        getDurationString(61, 10);
+        getDurationString(3695L);
+    }
+
+    public static void getDurationString(long minutes, long seconds) {
+        if (minutes >= 0 && seconds < 60 && seconds >= 0) {
+            System.out.println((minutes / 60) + "h " + (minutes % 60)  + "m " +seconds + "s");
+        } else {
+            System.out.println("Invalid Value");
+        }
+    }
+
+        public static void getDurationString (long second){
+            if (second > -1) {
+                getDurationString((second/60), (second%60));
+            } else {
+                System.out.println("Invalid Value");
+            }
+        }
+
+}
